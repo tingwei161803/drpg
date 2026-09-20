@@ -1,0 +1,31 @@
+DRPG: Dynamic Retrieval-based Policy Generation
+Copyright 2026 The DRPG authors
+  Ting-Wei Chang, Po-Chun Chen, Hen-Hsen Huang, Hsin-Hsi Chen
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+--------------------------------------------------------------------------------
+This repository is derived from StreamBench, which is also distributed under the
+Apache License, Version 2.0:
+
+  StreamBench: Towards Benchmarking Continuous Improvement of Language Agents
+  Cheng-Kuang Wu, Zhi Rui Tam, Chieh-Yen Lin, Yun-Nung Chen, Hung-yi Lee
+  https://github.com/stream-bench/stream-bench
+  https://arxiv.org/abs/2406.08747
+
+The benchmark environments (stream_bench/benchmarks), the LLM backends
+(stream_bench/llms), the evaluation pipeline (stream_bench/pipelines) and the
+Zero-shot / Self-Refine / Self-StreamICL / MemPrompt agents come from that
+project, with modifications. The DRPG framework itself
+(stream_bench/agents/policy.py, policy_rag.py, utils_rag.py) and the
+Dynamic Cheatsheet baseline (stream_bench/agents/dynamic_cheatsheet.py) were
+added by the DRPG authors.
+
+Dynamic Cheatsheet is a reimplementation, for the no-feedback ablation, of:
+
+  Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory
+  Mirac Suzgun et al., https://arxiv.org/abs/2504.07952
+
+The benchmark datasets (Spider, CoSQL, BIRD, HotpotQA, DDXPlus, DS-1000) are
+distributed by their original authors under their own licenses; this repository
+only downloads them.

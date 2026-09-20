@@ -1,0 +1,61 @@
+[project]
+name = "drpg"
+version = "1.0.0"
+description = "DRPG: Dynamic Retrieval-based Policy Generation for continual LLM improvement (COLM 2026)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Ting-Wei Chang" },
+    { name = "Po-Chun Chen" },
+    { name = "Hen-Hsen Huang" },
+    { name = "Hsin-Hsi Chen" },
+]
+dependencies = [
+    # Retrieval: BAAI/bge-base-en-v1.5 embeddings in a FAISS index
+    "faiss-cpu",
+    "torch",
+    "transformers",
+    # Datasets and metrics
+    "datasets",
+    "evaluate",
+    "numpy",
+    "pandas",
+    # Benchmarks
+    "func-timeout",   # time limits around executed SQL and Python
+    "gdown",          # download_text2sql_data.py
+    # Runtime
+    "PyYAML",
+    "requests",
+    "tqdm",
+    "colorama",
+    "jsonlines",
+    "wandb",          # imported by the pipeline; --use_wandb stays optional
+]
+
+[project.optional-dependencies]
+# DS-1000 grades by executing the generated solution in-process, so the
+# libraries its tasks are written against must be importable in the same
+# environment. Only needed for `configs/bench/ds_1000.yml`.
+ds1000 = [
+    "scipy",
+    "scikit-learn",
+    "tensorflow",
+    "matplotlib",
+    "xgboost",
+    "statsmodels",
+]
+# LLM providers. The paper's two backends (Google AI Studio, NVIDIA NIM) are
+# plain REST calls and need none of these; install the extra for the SDK-backed
+# provider you want, e.g. `uv sync --extra openai`.
+openai = ["openai"]
+anthropic = ["anthropic"]
+gemini-sdk = ["google-generativeai"]
+groq = ["groq"]
+together = ["together"]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2609.16800"
+
+[tool.uv]
+package = false

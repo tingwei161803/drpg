@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "DRPG: Dynamic Retrieval-based Policy Generation"
+abstract: >-
+  Reference implementation of DRPG, a framework that augments memory-based
+  retrieval with a dynamic policy generator for continual LLM improvement in
+  streaming settings.
+license: Apache-2.0
+type: software
+authors:
+  - family-names: Chang
+    given-names: Ting-Wei
+    orcid: "https://orcid.org/0009-0005-2243-1084"
+  - family-names: Chen
+    given-names: Po-Chun
+  - family-names: Huang
+    given-names: Hen-Hsen
+  - family-names: Chen
+    given-names: Hsin-Hsi
+preferred-citation:
+  type: conference-paper
+  title: >-
+    Smarter by the Moment: Environment-Driven Dynamic Policies for Continual
+    LLM Improvement
+  authors:
+    - family-names: Chang
+      given-names: Ting-Wei
+    - family-names: Chen
+      given-names: Po-Chun
+    - family-names: Huang
+      given-names: Hen-Hsen
+    - family-names: Chen
+      given-names: Hsin-Hsi
+  collection-title: "Conference on Language Modeling (COLM)"
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2609.16800"
+      description: arXiv preprint
+  url: "https://arxiv.org/abs/2609.16800"

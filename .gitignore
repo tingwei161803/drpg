@@ -1,0 +1,21 @@
+# Datasets and databases downloaded at setup time
+data/
+
+# Run artifacts
+log/
+wandb/
+*.jsonl
+*.jsonl.db
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

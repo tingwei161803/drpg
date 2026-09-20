@@ -1,0 +1,13 @@
+# Oracle agent: answers every question with the ground-truth label, so its score
+# should be ~100%. Use it to check that the datasets, the feedback loop and the
+# metric are wired up correctly before spending any tokens.
+#
+# The llm block is required by the base Agent but is never called, so it points
+# at the local Ollama client, which needs no API key.
+agent_name: gt
+seed: 42
+llm:
+  series: ollama
+  model_name: unused
+  temperature: 0.0
+  max_tokens: 0
