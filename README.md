@@ -2,7 +2,7 @@
 
 Reference implementation of **“Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement”** (COLM 2026).
 
-[Paper (arXiv:2609.16800)](https://arxiv.org/abs/2609.16800) ·  [繁體中文說明](README.zh-TW.md)
+[Paper (arXiv:2609.16800)](https://arxiv.org/abs/2609.16800) ·  [Project page](https://drpg.peteraim.com/) ·  [繁體中文說明](README.zh-TW.md)
 
 ![The DRPG framework](assets/overview.png)
 
